@@ -45,7 +45,7 @@ public class RequestGetServlet extends HttpServlet {
 		 * 
 		 */
 		String name = request.getParameter("name"); // "차은우" | ""
-		String gender = request.getParameter("gender"); // "M" | "F" | ""
+		String gender = request.getParameter("gender"); // "M" | "F" | null
 		int age = Integer.parseInt(request.getParameter("age")); // "20" => 20 | "" => NumberFormatException 예외발생! : 빈문자열, 숫자가 아닌걸로는 변환 불가!
 		String city = request.getParameter("city"); // "경기도"
 		double height = Double.parseDouble(request.getParameter("height")); // "160" => 160.0
@@ -122,10 +122,15 @@ public class RequestGetServlet extends HttpServlet {
 		out.printf("키는 <span id ='height'>%.1f</span> cm이고 , ", height);
 		
 		out.printf("성별은");
-		if(gender.equals("M")) {
-			out.println("<span id='gender'>남자</span>입니다.");
-		}else {
-			out.println("<span id='gender'>여자</span>입니다.");
+		
+		if(gender == null) {
+			out.println("선택을 안했습니다.");
+		} else {
+			if(gender.equals("M")) {
+				out.println("<span id='gender'>남자</span>입니다.");
+			}else {
+				out.println("<span id='gender'>여자</span>입니다.");
+			}
 		}
 		
 		out.print("좋아하는 음식은 ");
