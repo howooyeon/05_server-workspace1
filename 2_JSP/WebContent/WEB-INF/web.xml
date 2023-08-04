@@ -3,6 +3,16 @@
   <display-name>2_JSP</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-
   </welcome-file-list>
+  
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/views/error500.jsp</location>
+  </error-page>
+  
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/views/error404.jsp</location> <!-- 개발할 때는 가장 나중에 추가하기 -->
+  </error-page>
+  
 </web-app>
