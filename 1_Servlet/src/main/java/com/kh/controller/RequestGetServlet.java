@@ -42,7 +42,6 @@ public class RequestGetServlet extends HttpServlet {
 		 * >request.getParameter("키값"); : String(그에 해당하는 value값)
 		 * >request.getParameterValues("키값") : String[] (그에 해당하는 value값들이 배열에 담겨서 반환)
 		 * 
-		 * 
 		 */
 		String name = request.getParameter("name"); // "차은우" | ""
 		String gender = request.getParameter("gender"); // "M" | "F" | null
