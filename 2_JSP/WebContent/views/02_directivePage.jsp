@@ -23,6 +23,7 @@
 		0번 인덱스 : <%= list.get(0) %> <br>
 		1번 인덱스 : <%= list.get(1) %> <br>
 		100번 인덱스 : <%= list.get(100) %> <br>
+		<!-- index outofbounds 애러남 -->
 	</p>
 </body>
 </html>
